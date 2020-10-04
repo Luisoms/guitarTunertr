@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Tuner</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <!-- from a free CDN -->
+    <!-- From a local copy <script src="onlinetunner.min.js"></script>-->
+    <script src="https://cdn.rawgit.com/citronneur/onlinetuner.co/master/js/onlinetuner.min.js"></script>
+</head>
+
+<body>
+
+    <div class="tuner-wrap invert">
+        <h1>Guitar Tuner <span>by Luis Molina</span></h1>
+        <div id="turnOnOff" class="btn-tuner tunerOn invert">
+            <div class="circle"></div>
+        </div>
+        <div id="guitar-tuner">
+            <canvas width="300" height="300" id="tunerBase"></canvas>
+        </div>
+    </div>
+
+    <script src="tuner.js"></script>
+</body>
+
+</html>

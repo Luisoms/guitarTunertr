@@ -1,0 +1,40 @@
+//5 COLORS
+
+$colors: (
+    primario:   #249AEF,
+    segundario: #25F17A,
+    negro:      #0f0f0f,
+    blanco:     #ffffff,
+    sombra:     #00000080,
+
+    // ESCALA DE GRISES
+    dk01:       #181818,
+    dk02:       #262626,
+    dk03:       #363636,
+    lt01:       #f0f0f0,
+    lt02:       #c8c8c8,
+    lt03:       #a8a8a8,
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+@mixin displayFlex($justify,$align,$direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin responsivemin ($value) {
+    @media (min-width: $value){
+        @content;
+    }
+}
+
+@mixin responsivemax ($value) {
+    @media (max-width: $value){
+        @content;
+    }
+}
